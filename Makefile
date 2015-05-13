@@ -1,8 +1,11 @@
-# This Makefile is taken from this discussion on tex.stackoverflow
+# This Makefile is taken from the following discussion on tex.stackoverflow
 # http://tex.stackexchange.com/questions/40738/how-to-properly-make-a-latex-project
 ######################################################################
 
 MAIN = main
+SRC = ./config/*.tex ./tex/*.tex $(MAIN).tex
+IMG = ./img/*
+BIB = *.bib
 
 # The first rule in a Makefile is the one executed by default ("make"). It
 # should always be the "all" rule, so that "make" and "make all" are identical.
@@ -30,11 +33,11 @@ all: $(MAIN).pdf
 # -interactive=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-$(MAIN).pdf: $(MAIN).tex
-	latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make $<
+$(MAIN).pdf: $(SRC) $(IMG) $(BIB)
+	latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make $(MAIN).tex
 
-html: $(MAIN).tex
-	htlatex $< "html,2,info"
+html: $(SRC) $(IMG) $(BIB)
+	htlatex $(MAIN).tex "html,2,info"
 	# produces 2-level html files
 	# (https://www.tug.org/applications/tex4ht/mn-commands.html)
 
