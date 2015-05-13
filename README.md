@@ -1,34 +1,32 @@
-### WHAT YOU NEED IN ORDER TO USE "OSUDISSERT96"
+### What you need to use this OSU Dissertaion template
 (the 1996 Graduate School Dissertation/Thesis format)
 
 To use the osudissert style, you will need to have
-1. LaTeX2e (obviously).
-2. osudissert96.cls
+1. LaTeX2e (obviously)
+2. `osudissert96.cls` and `osudissert96-mods.sty`
 
 ### File structure
 
 The template is organized in the following file structure:
 
-./ (root directory)
-|- README.md (This file)
-|- osudissert96.cls
-|- osudissert96-mods.sty
-|- Makefile
-|- ref.bib (sample bibliography database)
-|- config:  (contains the configuration files)
-|  |- preamble.tex        (contains the packages, etc.)
-|  |- proposal-macros.tex (contains some macros for color, etc.)
-|
-|- img:     (contains the image files, currently empty)
-|
-|- tex:     (contains the tex source)
-   |- abstract.tex
-   |- vita.tex
-   |- ack.tex
-   |- 1.introduction.tex
-   |- 2.background.tex
-   |- 3.contribution.tex
-   |- 4.conclusion.tex
+* (root directory)
+  - README.md (This file)
+  - osudissert96.cls
+  - osudissert96-mods.sty
+  - Makefile
+  - ref.bib (sample bibliography database)
+  - config:  (contains the configuration files)
+    - preamble.tex        (contains the packages, etc.)
+    - proposal-macros.tex (contains some macros for color, etc.)
+  - img:     (contains the image files, currently empty)
+  - tex:     (contains the tex source)
+    - abstract.tex
+    - vita.tex
+    - ack.tex
+    - 1.introduction.tex
+    - 2.background.tex
+    - 3.contribution.tex
+    - 4.conclusion.tex
 
 ### Compiling the project
 
