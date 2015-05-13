@@ -1,3 +1,5 @@
+% !TEX root = ../main.tex
+
 % SB: These packages were chosen solely by me based on my requirements and preferences. This mostly has nothing to do
 % with the university requirements.
 
@@ -42,3 +44,12 @@
 
 % SB: Cleveref footnote format
 \crefformat{footnote}{#2\footnotemark[#1]#3}
+
+%-------------------- SJ: custom configurations ------------------------
+\usepackage[semicolon,authoryear]{natbib}
+%\bibpunct{(}{)}{;}{a}{}{;} %configure punctuation: use parentheses (), semicolon to separate, and author-year style
+ % numbering reset and prefixed for each section
+%\usepackage{amsmath}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+%---------------------------------------------------------------

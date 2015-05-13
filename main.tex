@@ -14,7 +14,7 @@
 %   
 
 % SB: Put all package definitions in the following file
-\input{preamble}
+\input{./config/preamble}
 
 % SB: Define a toggle to save space, hacks to reduce whitespace to help with printing
 \newtoggle{compact-space}
@@ -38,7 +38,7 @@
 
 
 % SB: Proposal-wide macros file
-\input{proposal-macros}
+\input{./config/proposal-macros}
 
 \newtoggle{extra-materials}
 % \toggletrue{extra-materials}
@@ -73,8 +73,7 @@
 % careful not to include \labels within your \chapter definitions or
 % there will be problems.  If you don't want this to be automated, comment
 % out the \typesetChapterTitle definition below and do your chapters in
-% the form:
-% \chapter[MY TITLE]{My Title}
+% the form: \chapter[MY TITLE]{My Title}
 % 
 % \renewcommand\typesetChapterTitle[1]{\uppercase{#1}}
 \renewcommand\typesetChapterTitle[1]{#1}
@@ -85,15 +84,15 @@
 % First, declare the parts of your title page
 %
 
-\author{Swarnendu Biswas}
-\title{OSU CSE PhD Candidacy Template}
-\authordegrees{XX, YY}  % Degrees thus far, not including this one.
+\author{Author Name}
+\title{Title}
+\authordegrees{Master of Technology, Bachelor of Engineering}  % Degrees thus far, not including this one.
 \unit{Department of Computer Science and Engineering}
 
-\advisorname{WW}
-\member{XX}
-\member{YY}
-\member{ZZ}
+\advisorname{Dr.\ Smart}
+\member{Dr.\ Clever}
+\member{Dr.\ Intelligent}
+\member{Dr.\ Hardworker}
 %\member{Yet another dude}      % Normally you will have advisor + 2 members
 
 
@@ -128,8 +127,8 @@
 %
 
 % If you get rid of \disscopyright, restore the \blankpage line after it
-\disscopyright
-%\blankpage
+%\disscopyright
+\blankpage
 
 % SB: Space hack for abstract
 \iftoggle{compact-space}
@@ -137,12 +136,9 @@
   \begin{small}
 }{}
 
-%
-% Abstract goes here.
-%
-
+%: Abstract
 \begin{abstract}
-  \input{abstract}
+  \input{./tex/abstract}
 \end{abstract}
 
 \iftoggle{compact-space}
@@ -165,10 +161,7 @@
 %   \input{abstract}
 % \end{externalabstract}
 
-%
-%  My Dedication
-%
-
+%: Dedication
 % Dedication is not needed in candidacy proposal
 % \dedication{This is dedicated to the one I love \ldots\ la la la \ldots}
 
@@ -178,8 +171,11 @@
 % and ``vita.tex''.
 %
 
+%: Acknowledgement
 % #Not sure whether we should include ack and vita in the candidacy protocol
 % \include{ack}
+
+%: Vita
 \include{vita} % Might not need for a candidacy proposal
 
 % SB: Space hack for toc, lof
@@ -211,19 +207,19 @@
 % separate file using the \include{} command.
 %
 
-\newpage
-\input{introduction}     % tell them what you are going to tell them 
+%: Introduction
+\include{./tex/1.introduction}     % tell them what you are going to tell them 
 
-\newpage
+%: Background
+\include{./tex/2.background}   % describe the problem statement
 
-\input{background}   % describe the problem statement
+%: Contribution
+\include{./tex/3.contribution}    % what is your solution
+%\input{./tex/contrib2}
+%\input{./tex/contrib3}
 
-\newpage
-
-\input{contrib1}    % what is your solution
-\input{contrib2}
-\input{contrib3}
-\input{conclusion}       % conclusion stuff
+%: Conclusion
+\include{./tex/4.conclusion}       % conclusion stuff
 
 %
 % If you have appendices in your dissertation, you will need the
@@ -232,6 +228,7 @@
 % look just like any chapter.
 %
 
+%: Appendix
 % \appendix
 % \include{app1}
 % \include{app2}
@@ -255,7 +252,10 @@
   \begin{spacing}{0.6}
 }{}
 
-\bibliographystyle{plain}
+%====================================================
+%: Bibliography
+%\newpage
+\bibliographystyle{IEEEtranN}
 \bibliography{ref}
 
 \iftoggle{compact-space}{
