@@ -1,17 +1,17 @@
 \documentclass{osudissert96}
-% 
+%
 % To change the dissertation to a Master's Thesis, include a documentclass
 % option such as [masters], [ms], [ma], etc.  Also available are [osudraft]
 % and [twoside].  As a reminder, documentclass options are a
 % comma-separated list, e.g. \documentclass[ms,osudraft]{osudissert96}
-% 
+%
 
-% 
+%
 % Everything between the \documentclass and the \begin{document} is
 %   called the preamble of the document. Everything between the
 %   \begin{document} and the \end{document} is called the body of the
 %   document. Define any additional commands you want here (the preamble)
-%   
+%
 
 % SB: Put all package definitions in the following file
 \input{./config/preamble}
@@ -31,8 +31,8 @@
   \usepackage[font=small]{caption}
   \setlength{\abovecaptionskip}{5pt}
   \setlength{\belowcaptionskip}{-15pt}
-  \titleformat{\chapter}[display]   
-  {\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\large}   
+  \titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\large}
   \titlespacing*{\chapter}{0pt}{-40pt}{30pt}
 }{}
 
@@ -47,7 +47,7 @@
 % SB: Uncommenting this line disables our comments
 % \renewcommand{\grumbler}[2]{}
 
-% 
+%
 % It is better to break up the dissertation into multiple files (e.g.,
 % one file per chapter, as well as separate files for the abstract,
 % acknowledgements, and vita).  These files are brought into the
@@ -59,13 +59,13 @@
 % etc., will be preserved as though all the files were actually
 % printed. For example, the line below would result only in chapters 1
 % and 3 being printed (if it were uncommented).
-% 
+%
 
 % \includeonly{ch1.intro,ch3.implem}
 
 % UPDATED TEXT (2010):
 % In the newest format, titles should be title case everywhere.
-% 
+%
 % HISTORICAL TEXT (1996):
 % In the new format, the titles of each chapter should appear in
 % uppercase.  In the TOC, however, they should be in lowercase.
@@ -74,7 +74,7 @@
 % there will be problems.  If you don't want this to be automated, comment
 % out the \typesetChapterTitle definition below and do your chapters in
 % the form: \chapter[MY TITLE]{My Title}
-% 
+%
 % \renewcommand\typesetChapterTitle[1]{\uppercase{#1}}
 \renewcommand\typesetChapterTitle[1]{#1}
 
@@ -176,7 +176,7 @@
 % \include{ack}
 
 %: Vita
-\include{vita} % Might not need for a candidacy proposal
+\include{./tex/vita} % Might not need for a candidacy proposal
 
 % SB: Space hack for toc, lof
 \iftoggle{compact-space}
@@ -208,7 +208,7 @@
 %
 
 %: Introduction
-\include{./tex/1.introduction}     % tell them what you are going to tell them 
+\include{./tex/1.introduction}     % tell them what you are going to tell them
 
 %: Background
 \include{./tex/2.background}   % describe the problem statement
@@ -264,4 +264,3 @@
 }{}
 
 \end{document}
-

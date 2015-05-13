@@ -8,7 +8,8 @@
 % \usepackage[caption=false]{subfig}
 % \usepackage[numbers]{natbib}
 %\usepackage{algorithmic}
-\usepackage[pdftex]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{mdwlist}
@@ -52,4 +53,10 @@
 %\usepackage{amsmath}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
+
+% required to make it work with latexmk;
+% use \inputfile{file} instead of \input{file}
+\newcommand\inputfile[1]{%
+    \InputIfFileExists{#1}{}{\typeout{No file #1.}}%
+}
 %---------------------------------------------------------------

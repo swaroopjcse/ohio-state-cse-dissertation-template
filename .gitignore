@@ -50,3 +50,7 @@ Backup[ ]of[ ]*.numbers/
 *.xref
 *.html
 *.css
+
+### latexmk files ###
+*.fdb_latexmk
+*.fls
