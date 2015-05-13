@@ -42,6 +42,7 @@ clean:
 	latexmk -CA
 
 clean-all: cleanpdf cleanhtml
+	\rm -f *.fdb_latexmk *.fls
 
 cleanpdf:
 	\rm -f *bbl *pdf *log *aux *gz *lof *lot *out *toc *dvi

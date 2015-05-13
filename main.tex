@@ -78,6 +78,7 @@
 % \renewcommand\typesetChapterTitle[1]{\uppercase{#1}}
 \renewcommand\typesetChapterTitle[1]{#1}
 
+%====================================================
 \begin{document}
 
 %
@@ -102,6 +103,7 @@
 
 \maketitle
 
+%====================================================
 % Next, EITHER a copyright or BLANK page.
 %
 %   The following creates a page used to copyright your dissertation
@@ -136,6 +138,7 @@
   \begin{small}
 }{}
 
+%====================================================
 %: Abstract
 \begin{abstract}
   \input{./tex/abstract}
@@ -144,6 +147,7 @@
 \iftoggle{compact-space}
 {\end{small}
 }{}
+%====================================================
 
 %
 % UPDATED TEXT (2010):
@@ -166,6 +170,7 @@
 % \dedication{This is dedicated to the one I love \ldots\ la la la \ldots}
 
 
+%====================================================
 %
 % Bring in Acknowledgement and Vita from separate files named ``ack.tex''
 % and ``vita.tex''.
@@ -173,7 +178,7 @@
 
 %: Acknowledgement
 % #Not sure whether we should include ack and vita in the candidacy protocol
-% \include{ack}
+% \include{./tex/ack}
 
 %: Vita
 \include{./tex/vita} % Might not need for a candidacy proposal
@@ -184,6 +189,7 @@
   \begin{small}
 }{}
 
+%====================================================
 %
 % Make the Table of Contents and other good stuff
 %
@@ -207,6 +213,7 @@
 % separate file using the \include{} command.
 %
 
+%====================================================
 %: Introduction
 \include{./tex/1.introduction}     % tell them what you are going to tell them
 
@@ -215,8 +222,6 @@
 
 %: Contribution
 \include{./tex/3.contribution}    % what is your solution
-%\input{./tex/contrib2}
-%\input{./tex/contrib3}
 
 %: Conclusion
 \include{./tex/4.conclusion}       % conclusion stuff
@@ -228,6 +233,7 @@
 % look just like any chapter.
 %
 
+%====================================================
 %: Appendix
 % \appendix
 % \include{app1}
