@@ -15,11 +15,11 @@ The template is organized in the following file structure:
   - `osudissert96-mods.sty`
   - `Makefile`
   - `ref.bib` (sample bibliography database)
-  - `config`:  (contains the configuration files)
+  - `config/`:  (contains the configuration files)
     - `preamble.tex`        (contains the packages, etc.)
     - `proposal-macros.tex` (contains some macros for color, etc.)
-  - `img`:     (contains the image files, currently empty)
-  - `tex`:     (contains the tex source)
+  - `img/`:     (contains the image files, currently empty)
+  - `tex/`:     (contains the tex source)
     - `abstract.tex`
     - `vita.tex`
     - `ack.tex`
