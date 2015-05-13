@@ -3,10 +3,8 @@ WHAT YOU NEED IN ORDER TO USE "OSUDISSERT96"
 
 
 To use the osudissert style, you will need to have
-
-   1. LaTeX2e (obviously).
-
-   2. osudissert96.cls
+1. LaTeX2e (obviously).
+2. osudissert96.cls
 
 
 COMPILING THE EXAMPLE
@@ -35,16 +33,6 @@ The template is organized in the following file structure:
    |- 4.conclusion.tex
 
 To fully compile this example, you should do the following:
-
-   1. In the root directory, run LaTeX (or pdflatex) on main. This will do the inital compilation of the document and will create a list of the labels and references made. ($ pdflatex main)
-
-   2. Run BibTeX on main. This will go into bibfile.bib and extract
-the appropriate bibliography for the references cited in the
-dissertation. ($ bibtex main)
-
-   3. Run LaTeX on Thesis two more times. The first time, LaTeX will
-go through and (at the end) will recognize the references made in the
-citations and will set up the table of contents.  However, the table
-of contents will probably be off since the table of contents will
-grow. The second time through, LaTeX will get the page numbers correct
-in the table of contents. ($ pdflatex main; pdflatex main)
+1. In the root directory, run LaTeX (or pdflatex) on main. This will do the inital compilation of the document and will create a list of the labels and references made. (`$ pdflatex main`)
+2. Run BibTeX on main. This will go into bibfile.bib and extract the appropriate bibliography for the references cited in the dissertation. (`$ bibtex main`)
+3. Run LaTeX on Thesis two more times. The first time, LaTeX will go through and (at the end) will recognize the references made in the citations and will set up the table of contents.  However, the table of contents will probably be off since the table of contents will grow. The second time through, LaTeX will get the page numbers correct in the table of contents. (`$ pdflatex main; pdflatex main`)
