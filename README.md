@@ -2,35 +2,35 @@
 (the 1996 Graduate School Dissertation/Thesis format)
 
 To use the osudissert style, you will need to have
-1. LaTeX2e (obviously)
-2. `osudissert96.cls` and `osudissert96-mods.sty`
+* LaTeX2e (obviously)
+* `osudissert96.cls` and `osudissert96-mods.sty`
 
 ### File structure
 
 The template is organized in the following file structure:
 
 * (root directory)
-  - README.md (This file)
-  - osudissert96.cls
-  - osudissert96-mods.sty
-  - Makefile
-  - ref.bib (sample bibliography database)
-  - config:  (contains the configuration files)
-    - preamble.tex        (contains the packages, etc.)
-    - proposal-macros.tex (contains some macros for color, etc.)
-  - img:     (contains the image files, currently empty)
-  - tex:     (contains the tex source)
-    - abstract.tex
-    - vita.tex
-    - ack.tex
-    - 1.introduction.tex
-    - 2.background.tex
-    - 3.contribution.tex
-    - 4.conclusion.tex
+  - `README.md` (This file)
+  - `osudissert96.cls`
+  - `osudissert96-mods.sty`
+  - `Makefile`
+  - `ref.bib` (sample bibliography database)
+  - `config`:  (contains the configuration files)
+    - `preamble.tex`        (contains the packages, etc.)
+    - `proposal-macros.tex` (contains some macros for color, etc.)
+  - `img`:     (contains the image files, currently empty)
+  - `tex`:     (contains the tex source)
+    - `abstract.tex`
+    - `vita.tex`
+    - `ack.tex`
+    - `1.introduction.tex`
+    - `2.background.tex`
+    - `3.contribution.tex`
+    - `4.conclusion.tex`
 
 ### Compiling the project
 
-To fully compile this example, it should suffice to run `$ make`.
+To fully compile this example, it should suffice to run `$ make` in the root directory.
 
 If you do not have some tools used in `Makefile` or you have to compile manually for some other reaons, you should do the following:
 
